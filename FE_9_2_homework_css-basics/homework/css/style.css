@@ -1,0 +1,163 @@
+/* Task-1 */
+@media print {
+    body {
+        background: transparent;
+        padding-top: 0;
+    }
+
+    .tm-sidebar,
+    #about,
+    section:not(:first-of-type) {
+        display: none;
+    }
+
+    .tm-main-content {
+        margin-left: 0;
+    }
+
+    .tm-banner {
+        height: 20em;
+    }
+
+    .flex-2-col {
+        display: block;
+    }
+
+    .pad {
+        padding: 0 0 0 2em;
+    }
+
+    h2.tm-section-title {
+        color: blue;
+    }
+
+    .tm-team-description-container {
+        max-width: none;
+    }
+
+    div[class|="flex-item"] {
+        padding: 0;
+        text-align: center;
+    }
+}
+    
+@media screen {
+    /* Task-2 */
+    .tm-section-title-box {
+        font-size: 3em;
+    }
+
+    .thumbnail {
+        border-radius: 50%;
+    }
+
+    .tm-section-title-box:hover {
+        cursor: pointer;
+        background-color: #0099cc;
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Task-3 */
+    p:not(.tm-banner-text):first-letter {
+        color: #76cdd7;
+        font-size: 30px;
+    }
+
+    /* Task-4 */
+    .tm-main-nav,
+    .tm-content-box {
+        box-shadow: 10px 10px 40px -10px black;
+    }
+
+    /* Task-5 */
+    .tm-content-box {
+        position: relative;
+    }
+
+    .tm-content-box:not(:empty)::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 26px solid #0099cc;
+        border-right: 130px solid transparent;
+        z-index: 1;
+    }
+
+    /* Task-6 */
+    .carousel-item .tm-section-title {
+        color: gainsboro;
+        letter-spacing: 5px;
+    }
+
+    /* Task-7 */
+    h2 + p {
+        font-style: italic;
+    }
+
+    /* Task-8 */
+    p {
+        line-height: 30px;
+    }
+
+    /* Task-9 */
+    .heading a:visited {
+        color: black
+    }
+
+    .heading a:hover {
+        text-decoration: underline double;
+        color: #0099cc;
+    }
+
+    .heading a.text::after {
+        content: "New";
+        font-size: 60%;
+        vertical-align: super;
+        color: red;
+    }
+
+    /* Task-10 */
+   .gallery-container li:nth-child(odd) {
+        background-color: whitesmoke;
+    }
+    
+    .gallery-container p:first-letter {
+        padding: 0;
+        color: black;
+        font-size: 30px;
+    }
+
+    .box p {
+        font-size: 20px;
+    }
+
+    .box h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    /* Task-11 */
+    .tm-nav-item:not(:last-of-type) {
+        border-bottom: 2px dotted silver;
+    }
+
+    /* Task-12 */
+    .contact-form input,
+    .contact-form button {
+        color: red;
+    }
+
+    .mandatory-field::after {
+        content: "*";
+        color: red;
+        font-weight: bold;
+    }
+
+    .submit-btn:hover {
+        color: white;
+        background: #76cdd7;
+        border-color: transparent;
+    }
+}
