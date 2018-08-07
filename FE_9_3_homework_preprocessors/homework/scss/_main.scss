@@ -1,198 +1,189 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 body {
-  font-family: $fontFamily;
-  background: $contentBackground;
+    font-family: $font_Family;
+    background-color: $main_Background;
 }
-
+.main-wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
 input:focus,
 textarea:focus {
-  outline-color: $primaryColor;
+    outline-color: $main_Color;
 }
-
-.main-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 header {
-  display: flex;
-  align-content: space-between;
-  align-items: flex-end;
-
-  .logo img {
-    width: 360px;
-  }
-
-  nav {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex: 1 100%;
-    height: 50px;
-    border-top: 1px solid $lineColor;
-    border-bottom: 1px solid $lineColor;
-    text-transform: uppercase;
-    margin-bottom: 38px;
-
-    a {
-      text-decoration: none;
-      color: $primaryColor;
-
-      &:hover {
-        color: lighten($primaryColor, 10);
-      }
-
-      &:active {
-        color: darken($primaryColor, 10);
-      }
-    }
-  }
-}
-
-.toolbar {
-  text-align: right;
-
-  input {
-    width: 200px;
-    height: 40px;
-    border: 1px solid $primaryColor;
-    padding: 10px 15px;
-    margin: 15px 0;
-    background-color: transparent;
-  }
-}
-
-.toolbar ::placeholder {
-  color: $primaryColor;
-}
-
-.post-list {
-  display:flex;
-  flex-wrap:wrap;
-  flex-direction:row;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  article {
-    flex: 0 48%;
-    margin-bottom: 20px;
-    padding: 7px;
-    background-color: $cardBackground;
-
-    .post-description {
-      color: $postDescription;
-      border-bottom: 1px solid $lineColor;
-      margin-bottom: 10px;
-      font-size: .8em;
-      padding-top: 0;
-    }
-
+    align-items: flex-end;
+    justify-content: space-between;
     img {
-      width: 100%;
+        width: 365px;
     }
+    nav {
+        display: flex;
+        margin-bottom: 33px;
+        border-top: 1px solid $line_Color;
+        border-bottom: 1px solid $line_Color;
+        a {
+            font-size: 15px;
+            padding: 19px 71px;
+            font-family: $font_Family;
+            font-weight: lighter;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $main_Color;
+            &:first-child {
+                padding: 19px 69px 19px 83px;
+            }
+            &:nth-child(2) {
+                padding: 19px 57px 20.5px 73px
+            }
+            &:hover {
+                color: lighten($main_Color, 10);
+            }
 
-    div {
-      padding: 7px;
-
-      h3 {
-        color: $cardHeader;
-        text-transform: uppercase;
-      }
-
-      p {
-        color: $paragraphColor;
-        line-height: 1.6em;
-        margin-bottom: 1.2em;
-      }
+            &:active {
+                color: darken($main_Color, 10);
+            }
+        }
     }
-  }
 }
-
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16.5px;
+    input {
+        padding: 10px 30.5px 10px 21px;
+        font-size: 14px;
+        border: 1px solid $main_Color;
+        background: $main_Background;
+        &::-webkit-input-placeholder {
+            color: $main_Color;
+        }
+    }
+}
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    article {
+        width: 48%;
+        height: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: $card_Background;
+        img {
+            width: 100%;
+        }
+        h3, p, .post-description {
+            margin: 0px 10px;
+        }
+        .post-description {
+            font-size: 12px;
+            padding: 5px 5px 10px;
+            border-bottom: 1px solid $line_Color;
+            color: $post_Description;
+        }
+        h3 {
+            color: $card_Heading;
+            margin-top: 6.5px;
+            font-size: 17.5px;
+            line-height: 23px;
+            text-transform: uppercase;
+        }
+        p {
+            color: $paragraph_Color;
+            line-height: 13px;
+            margin-bottom: 18.5px;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: lighter;
+        }
+    }
+}
 .about {
-  /*padding-left: 20px;*/
-
-  h1 {
-    color: $primaryColor;
-    text-transform: uppercase;
     text-align: right;
-    margin-top: 60px;
-  }
-
-  p {
-    margin-bottom: 1.5em;
-    color: $paragraphColor;
-    line-height: 1.7em;
-  }
-
-  img {
-    max-width: 100%;
-  }
-};
-
-.contact-form{
-  margin-top: 50px;
-  text-align: right;
-
-  h1,
-  h4 {
-    color: $primaryColor;
-  }
-
-  h4 {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  form {
-    input,
-    textarea {
-      width: 100%;
-      margin-bottom: 20px;
-      padding: 10px 20px;
-      border: 1px solid $formColor;
-
-      &::placeholder {
-        color: $formColor;
-      }
+    h1 {
+        color: $main_Color;
+        margin-top: 82px;
+        text-transform: uppercase;
     }
-
-    .submit-btn-wrapper {
-      text-align: right;
+    p {
+        color: $paragraph_Color;
+        padding: 0px 15px;
+        margin-bottom: 22px;
+        line-height: 24px;
+        font-size: 15px;
+        text-align: left;
+        font-weight: lighter;
+        margin-top: -2px;
     }
-
-    input[type=submit] {
-      background-color: $primaryColor;
-      color: white;
-      width: 200px;
-      height: 40px;
-      border: none;
-      text-transform: uppercase;
-      line-height: 30px;
-      font-weight: bold;
-      padding: unset;
-      cursor: pointer;
-
-      &:hover {
-        background-color: lighten($primaryColor, 10);
-      }
-
-      &:active {
-        background-color: darken($primaryColor, 10);
-      }
+    img {
+        max-width: 100%;
     }
-  }
+}
+.contact-form {
+    margin-top: 47px;
+    margin-bottom: 4px;
+    text-align: right;
+    h1,
+    h4 {
+        color: $main_Color;
+    }
+    h1 {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: 21px;
+        letter-spacing: -0.6px;
+    }
+    form {
+        input,
+        textarea {
+            width: 100%;
+            margin-bottom: 19px;
+            padding: 17px 21px;
+            border: 1px solid $form_Color;
+            background-color: $main_Background;
+            &::placeholder {
+                color: $form_Color;
+                font-size: 16px;
+            }
+        }
+        .submit-btn-wrapper {
+            text-align: right;
+        }
+        input[type=submit] {
+            margin-bottom: 3px;
+            background-color: $main_Color;
+            color: white;
+            width: 200px;
+            height: 40px;
+            border: none;
+            text-transform: uppercase;
+            line-height: 30px;
+            padding: unset;
+            cursor: pointer;
+            &:hover {
+                background-color: lighten($main_Color, 10);
+            }
+            &:active {
+                background-color: darken($main_Color, 10);
+            }
+        }
+    }
 }
 
 footer {
-  margin-bottom: 10px;
-
-  span {
-    color: $paragraphColor;
-    font-size: .8em;
-  }
+    margin-bottom: 10px;
+    span {
+        color: $paragraph_Color;
+        font-size: 12px;
+        font-weight: lighter;
+    }
 }
