@@ -1,4 +1,3 @@
-// Your code goes here
 const sideA=parseFloat(prompt('Enter side A:','0'));
 const sideB=parseFloat(prompt('Enter side B:','0'));
 const angle=parseFloat(prompt('Enter angle:','0'));
