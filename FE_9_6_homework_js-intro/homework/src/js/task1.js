@@ -1,6 +1,3 @@
-// Your code goes here
-// Your code goes here
-
 const amount=parseFloat(prompt('Enter amount of money','0'));
 const discount=parseFloat(prompt('Enter a number of discount','-1'));
 let output;
